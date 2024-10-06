@@ -18,8 +18,8 @@ def scrapeposts():
     api_url="https://fresh-linkedin-profile-data.p.rapidapi.com/get-linkedin-profile"
     querystring = {"linkedin_url":{purl},"type":"posts"}
     headers = {
-	"X-RapidAPI-Key": "72310cda61msh6785a04bc637e1fp1ada2cjsn4731e20bb28e",
-	"X-RapidAPI-Host": "fresh-linkedin-profile-data.p.rapidapi.com"
+	"X-RapidAPI-Key": "",
+	"X-RapidAPI-Host": ""
 }
     api_res = requests.get(api_url, headers=headers, params=querystring)
     if api_res.status_code == 200:
@@ -145,7 +145,7 @@ if choose == "My Info":
 
 elif choose == "Post Analyzer":
     st.title('📱 LinkedIn Posts Scanner ')
-    api_key = "AQW7AP5MQDaf4EP5gSTOKnS_4P3kGIWaju0l3qj2ltnAzr63Oc2T5J4ds_KDCbPOupko5NSh45J_cD3uXnypS1U26dEvvODw60wUCZ5HlAGMvkM4fDStNmtwnTt1CK3OY9JrzwuhTfocN1KmhPGLVdEyPcBjrUvLu"
+    api_key = ""
     url = "https://chatgpt-42.p.rapidapi.com/gpt4'"
     headers = {
       "api-key": api_key, 
@@ -170,7 +170,7 @@ elif choose == "Post Analyzer":
         st.text("FETCHED ALL THE COMMENTS!")
         st.text("FEEDING ALL COMMENTS TO AI...")
         api_base = "https://api.endpoints.anyscale.com/v1/chat/completions"
-        token = "esecret_x87vhql3nwigeupf8exw4egzw5" #esecret_x87vhql3nwigeupf8exw4egzw5
+        token = "" #esecret_x87vhql3nwigeupf8exw4egzw5
         url = api_base
         body = {
                 "model": "meta-llama/Llama-2-70b-chat-hf",
